@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(135, 135, 135);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 7%;
+  background-color: dimgray;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+      padding: 1%;
+
+      a {
+        text-decoration: none;
+        font-size: larger;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px;
+        background-color: black;
+        border-radius: 10px;
+        color: white;
+      }
+    }
+  }
+}
+
+.home,
+.create,
+.updated,
+.deleted {
+  width: 100%;
+  height: 93%;
+  position: absolute;
+  top: 7%;
+}
+
+
+/* HOME */
+.home,
+.updated,
+.deleted {
+  padding: 1%;
+  overflow: auto;
+  scrollbar-width: none;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        th {
+          padding: 1%;
+          border: 2px solid;
+          font-size: larger;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 1%;
+          border: 2px solid;
+          text-align: center;
+          font-size: large;
+
+
+          button {
+            width: 70%;
+            padding: 2%;
+            margin-bottom: 2%;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            a {
+              width: 100%;
+              text-decoration: none;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(dimgray, grey, darkgrey, silver);
+
+  form {
+    width: 40%;
+    height: 70%;
+    /* border: 2px solid; */
+    padding: 1%;
+    display: grid;
+    place-items: center;
+    background-color: silver;
+    box-shadow: 2px 4px 6px black;
+
+
+    table {
+      background: transparent;
+      backdrop-filter: blur(500px);
+      width: 90%;
+      height: 100%;
+
+      button {
+        width: 60%;
+        height: 80%;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 600;
+        background: linear-gradient(lightgreen, forestgreen);
+        transition: 0.2s;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        transition: 0.2s;
+        border-radius: 0;
+        background: linear-gradient(greenyellow, lightgreen);
+        scale: 1.05;
+      }
+
+      tbody {
+        font-size: larger;
+
+        tr {
+          .label {
+            width: 40%;
+          }
+
+          td {
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+              width: 100%;
+              height: 70%;
+              font-size: large;
+            }
+
+            select {
+              transform: scale(1.4);
+
+              option {
+                padding: 5%;
+              }
+            }
+
+            input[type="radio"] {
+              transform: scale(1.5);
+            }
+
+            input[type="checkbox"] {
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background: linear-gradient(dimgray, grey, darkgrey, silver);
+}
+
+.home table {
+  background: linear-gradient(lightgreen, forestgreen);
+}
+
+.updated {
+  background: linear-gradient(dimgray, grey, darkgrey, silver);
+}
+
+.updated table {
+  background: linear-gradient(skyblue, lightblue);
+}
+
+.deleted {
+  background: linear-gradient(dimgray, grey, darkgrey, silver);
+}
+
+.deleted table {
+  background: linear-gradient(lightsalmon, salmon);
+}
